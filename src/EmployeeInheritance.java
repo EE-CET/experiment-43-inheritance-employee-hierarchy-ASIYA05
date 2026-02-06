@@ -1,33 +1,66 @@
 import java.util.Scanner;
 
 class Employee {
-   
+    String name;
+    int age;
+    String phoneNumber;
+    String address;
+    int salary;
+
+    void printSalary() {
+        System.out.println(salary);
+    }
 }
 
-// TODO: Create class Officer extends Employee
-// Add 'specialization' attribute
+class Officer extends Employee {
+    String specialization;
+}
 
-// TODO: Create class Manager extends Employee
-// Add 'department' attribute
+class Manager extends Employee {
+    String department;
+}
 
 public class EmployeeInheritance {
-   
-        
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         // --- OFFICER INPUT ---
-        // Create Officer object
-        // Read name, age, phone, address, salary, specialization
-        // Hint: Use sc.nextLine() for strings to capture spaces, sc.nextInt() for numbers.
-        // Be careful with buffer clearing after nextInt()!
-        
+        Officer officer = new Officer();
+        officer.name = sc.nextLine();
+        officer.age = sc.nextInt();
+        sc.nextLine();
+        officer.phoneNumber = sc.nextLine();
+        officer.address = sc.nextLine();
+        officer.salary = sc.nextInt();
+        sc.nextLine();
+        officer.specialization = sc.nextLine();
+
         // --- MANAGER INPUT ---
-        // Create Manager object
-        // Read name, age, phone, address, salary, department
-        
+        Manager manager = new Manager();
+        manager.name = sc.nextLine();
+        manager.age = sc.nextInt();
+        sc.nextLine();
+        manager.phoneNumber = sc.nextLine();
+        manager.address = sc.nextLine();
+        manager.salary = sc.nextInt();
+        sc.nextLine();
+        manager.department = sc.nextLine();
+
         // --- OUTPUT ---
-        // Print "Officer:"
-        // Print officer details (one per line)
-        
-        // Print "Manager:"
-        // Print manager details (one per line)
-    
+        System.out.println("Officer:");
+        System.out.println(officer.name);
+        System.out.println(officer.age);
+        System.out.println(officer.phoneNumber);
+        System.out.println(officer.address);
+        System.out.println(officer.salary);
+        System.out.println(officer.specialization);
+
+        System.out.println("Manager:");
+        System.out.println(manager.name);
+        System.out.println(manager.age);
+        System.out.println(manager.phoneNumber);
+        System.out.println(manager.address);
+        System.out.println(manager.salary);
+        System.out.println(manager.department);
+    }
 }
