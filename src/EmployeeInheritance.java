@@ -5,7 +5,7 @@ class Employee {
     int age;
     String phoneNumber;
     String address;
-    int salary;
+    float salary;
 
     void printSalary() {
         System.out.println(salary);
@@ -24,29 +24,26 @@ public class EmployeeInheritance {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // --- OFFICER INPUT ---
         Officer officer = new Officer();
         officer.name = sc.nextLine();
         officer.age = sc.nextInt();
         sc.nextLine();
         officer.phoneNumber = sc.nextLine();
         officer.address = sc.nextLine();
-        officer.salary = sc.nextInt();
+        officer.salary = sc.nextFloat();
         sc.nextLine();
         officer.specialization = sc.nextLine();
 
-        // --- MANAGER INPUT ---
         Manager manager = new Manager();
         manager.name = sc.nextLine();
         manager.age = sc.nextInt();
         sc.nextLine();
         manager.phoneNumber = sc.nextLine();
         manager.address = sc.nextLine();
-        manager.salary = sc.nextInt();
+        manager.salary = sc.nextFloat();
         sc.nextLine();
         manager.department = sc.nextLine();
 
-        // --- OUTPUT ---
         System.out.println("Officer:");
         System.out.println(officer.name);
         System.out.println(officer.age);
